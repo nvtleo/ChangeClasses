@@ -1,0 +1,40 @@
+.imageFont {
+    width: 300px;
+    height: 400px;
+}
+
+.imagePosition {
+    position: relative;
+}
+
+.glassPosition {
+    position: absolute;
+    top: 100px;
+    left: 240px;
+    width: 165px;
+    opacity: 0.5;
+
+
+}
+
+.glassFont {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.area {
+    width: 70%;
+    margin: auto;
+}
+
+.bg {
+    background-image: url(../../public/glassesImage/background.jpg);
+}
+
+.btnGlass {
+    width: 100px;
+    height: 80px;
+    margin: 20px 20px;
+}
