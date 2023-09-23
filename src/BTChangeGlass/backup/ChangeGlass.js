@@ -69,12 +69,25 @@ export default class ChangeGlass extends Component {
         }
     ]
     state = {
-        glass: this.mangSP[0]
+        styleGlass: {
+            position: "absolute",
+            top: "100px",
+            left: "240px",
+            width: "165px",
+            opacity: "0.5"
+        }
+
     }
-    handleGlass = (number) => {
+    handleGlass = (img) => {
         this.setState({
-            glass: this.mangSP[number]
-        });
+            styleGlass: {
+                position: "absolute",
+                top: "100px",
+                left: "240px",
+                width: "165px",
+                opacity: "0.5"
+            }
+        })
     }
     hienThiSP = () => {
         return this.mangSP.map((glass) => {
@@ -85,18 +98,14 @@ export default class ChangeGlass extends Component {
         })
     }
     render() {
-        let { id, price, name, url, desc } = this.state.glass
+
         return (
             <div>
                 <header><h1>TRY GLASSES APP ONLINE</h1></header>
                 <div className="row">
                     <div className="col-6">
-                        <img className={megeClassName(css.imageFont)} src="./glassesImage/model.jpg" alt="" />
-                        <img className={css["glassPosition"]} src={url} alt="" />
-                        <div className={css["bgInfo"]}>
-                            <p className={css["nameGlass"]}>{name}</p>
-                            <p className={css["infoGlass"]}>{desc}</p>
-                        </div>
+                        <img className={megeClassName(css.imageFont, css.possition)} src="./glassesImage/model.jpg" alt="" />
+                        <img style={this.state.styleGlass} src="./glassesImage/v1.png" alt="" />
 
                     </div>
                     <div className="col-6">
@@ -104,15 +113,15 @@ export default class ChangeGlass extends Component {
                     </div>
                 </div>
                 <div className={megeClassName("row", css.area)}>
-                    <button onClick={() => { this.handleGlass(0) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v1.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(1) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v2.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(2) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v3.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(3) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v4.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(4) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v5.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(5) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v6.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(6) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v7.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(7) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v8.png" alt="" /></button>
-                    <button onClick={() => { this.handleGlass(8) }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v9.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v1.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v2.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v3.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v4.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v5.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v6.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v7.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v8.png" alt="" /></button>
+                    <button onClick={() => { this.handleGlass() }} className={css["btnGlass"]}><img className={css["glassFont"]} src="./glassesImage/v9.png" alt="" /></button>
 
 
                 </div>
