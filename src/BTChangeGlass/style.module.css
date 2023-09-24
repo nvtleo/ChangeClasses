@@ -8,8 +8,8 @@
 
 .glassPosition {
     position: absolute;
-    top: 160px;
-    left: 225px;
+    top: 108px;
+    left: 240px;
     width: 165px;
     opacity: 0.5;
     z-index: 2;
@@ -55,8 +55,8 @@
 
 .bgInfo {
     position: absolute;
-    bottom: 140px;
-    left: 158px;
+    bottom: 0px;
+    left: 175px;
     background-color: rgba(255, 166, 0, 0.527);
     width: 300px;
 }
